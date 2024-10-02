@@ -5,7 +5,7 @@ import java.util.List;
 public class CalculationService {
     //Fazendo o metódo receber um tipo "T" qualquer, extendendo da interface Comparable seus metódos, assim
     //dando continuidade ao código
-    public static <T extends Comparable<T>> T max(List<T> list) {
+    public static <T extends Comparable<? super T>> T max(List<T> list) {
         if (list.isEmpty()) {
             throw new IllegalStateException("List can't be empty");
         }
